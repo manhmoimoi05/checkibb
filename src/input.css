@@ -1,0 +1,27 @@
+/* import đường dẫn của google font chữ */
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Mono:ital,wght@0,200..800;1,200..800&family=Roboto:ital,wght@0,100..900;1,100..900&family=Ultra&display=swap");
+/* import file css của tailwind để sử dụng */
+@import "tailwindcss";
+/* ghi đè hành vi sử dụng chế độ tối trên tailwind -> mặc định chế độ tối dựa vào cài đặt trên window của người dùng nó sẽ tự động áp dụng trên web mình sử dụng
+-> khi ghi đè lúc này có thể tùy ý chuyển giữa 2 chế độ sáng tối ngay trên website mình sử dụng
+-> b1 : thẻ html hoặc body phải có class dark
+   b2 : các thay đổi khi chuyển sang chế độ tối phải nằm sau cụm dark:
+   b3 : nút bấm xử lí sự kiện thêm và xóa lớp class dark nằm trong thẻ html hoặc body 
+ */
+
+@custom-variant dark (&:where(.dark, .dark *));
+/* các định nghĩa về các thuộc tính mà không nằm trong tailwind css
+-> các thuộc tính custom */
+@theme {
+  --color-moi1: #f4f5fa;
+  --color-moi2: #cccccc;
+  --color-moi3: #f4f3;
+  --color-moi6: rgba(0, 0, 0, 0.8);
+  --color-moi7:rgba(255,255,255,0.8);
+  --font-roboto: "Roboto", "sans";
+  --font-ultra: "Ultra";
+  --font-moi4: "Atkinson Hyperlegible Mono";
+  --shadow-moi5: 1px 0px 10px 2px red;
+  --shadow-primary: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+}

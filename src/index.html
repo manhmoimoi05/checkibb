@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Document</title>
+  </head>
+  <body
+    class="text-roboto dark:bg-black dark:text-white transition-all duration-500 delay-100 ease-in-out"
+  >
+    <!-- giới thiệu bản thân-->
+    <section class="introduction">
+      <!-- thanh điều hướng -->
+      <div class="md:block hidden fixed top-5 left-10 z-10">
+        <ul
+          class="hover:bg-black dark:hover:bg-moi1 flex gap-x-3 border rounded py-2 px-5 border-gray-500 transition-all duration-300 ease-in-out"
+        >
+          <li
+            class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <a href="">Dashboard</a>
+          </li>
+          <li
+            class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <a href="">Team</a>
+          </li>
+          <li
+            class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <a href="">Project</a>
+          </li>
+          <li
+            class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <a href="">Calender</a>
+          </li>
+          <li
+            class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+          >
+            <a href="">Reports</a>
+          </li>
+        </ul>
+      </div>
+      <!-- bar -->
+      <div class="bar">
+        <!-- bar button -->
+        <button
+          class="bar-btn fixed md:hidden z-10 group top-5 left-10 shadow-primary rounded p-2 cursor-pointer text-gray-500 dark:hover:bg-white transition-all duration-500 delay-100 ease-in-out hover:bg-black dark:border"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+            />
+          </svg>
+        </button>
+
+        <!-- nội dung bar -->
+        <div
+          class="bar-content md:hidden w-0 bg-moi7 dark:bg-moi6 h-screen overflow-hidden fixed z-50 transition-all duration-300 ease-in-out"
+        >
+          <!-- cancel button -->
+          <button
+            class="cancel-btn fixed md:hidden z-10 group top-5 right-40 shadow-primary rounded p-2 cursor-pointer text-gray-500 dark:hover:bg-white transition-all duration-500 delay-100 ease-in-out hover:bg-black dark:border"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M6 18 18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+          <ul
+            class="hover:bg-black dark:hover:bg-moi1 border rounded m-3 py-2 px-5 border-gray-500 transition-all duration-300 ease-in-out"
+          >
+            <li
+              class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+            >
+              <a href="">Dashboard</a>
+            </li>
+            <li
+              class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+            >
+              <a href="">Team</a>
+            </li>
+            <li
+              class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+            >
+              <a href="">Project</a>
+            </li>
+            <li
+              class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+            >
+              <a href="">Calender</a>
+            </li>
+            <li
+              class="text-gray-500 hover:-translate-y-1 hover:text-white dark:hover:text-black transition-all duration-300 ease-in-out"
+            >
+              <a href="">Reports</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- hiện thị tổng số click -->
+      <button
+        type="button"
+        class="fixed z-10 group top-5 right-25 shadow-primary rounded p-2 cursor-pointer text-gray-500 dark:hover:bg-white transition-all duration-500 delay-100 ease-in-out hover:bg-black dark:border"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 group-hover:rotate-30 group-hover:scale-95 transition-all duration-600 ease-in-out"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M14.857 17.082a23.848 23.848 0 0 0 5.454-1.31A8.967 8.967 0 0 1 18 9.75V9A6 6 0 0 0 6 9v.75a8.967 8.967 0 0 1-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 0 1-5.714 0m5.714 0a3 3 0 1 1-5.714 0"
+          />
+        </svg>
+      </button>
+      <span
+        class="all-of-love text-white font-bold fixed top-2 right-22 z-20 px-2 rounded-full bg-red-500 transition-all duration-200"
+        >0</span
+      >
+      <!-- dark mode btn -->
+      <button
+        type="button"
+        class="fixed z-10 group top-5 right-10 shadow-primary rounded p-2 cursor-pointer btn-dark-mode text-gray-500 dark:hover:bg-white transition-all duration-500 delay-100 ease-in-out hover:bg-black dark:border"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="dark:size-6 size-0 transition-all duration-500 ease-in-out dark:rotate-90"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
+          />
+        </svg>
+
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 dark:size-0 transition-all duration-500 ease-in-out transform dark:rotate-90"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z"
+          />
+        </svg>
+      </button>
+
+      <!-- basic info -->
+      <div class="flex items-center flex-col relative">
+        <!-- ảnh nền -->
+        <div
+          class="bg-[url(../img/hoaanhdao.gif)] w-screen h-50 bg-cover bg-bottom bg-no-repeat"
+        >
+          
+        </div>
+        
+        <!-- avatar -->
+        <div
+          class="absolute top-35 w-30 rounded-[50%] border-4 border-white dark:border-black overflow-hidden transition-all duration-300 ease-in-out"
+        >
+          <img class="w-full" src="../img/deptrai.jpg" alt="" />
+        </div>
+
+        <!-- name and note-->
+        <h1
+          class="text-4xl font-semibold mt-15 text-[#2c2c2c] dark:text-moi1 tracking-wide"
+        >
+          Phan Manh
+        </h1>
+        <h3 class="mt-5 text-gray-500 text-xl text-center md:px-0 px-5">
+          Sinh viên năm thứ 3 của trường đại học Mỏ - Địa Chất
+        </h3>
+        <p
+          class="mt-5 max-w-200 text-center font-light text-gray-500 md:px-0 px-5"
+        >
+          Xây dựng các landing page về mọi lĩnh vực : Bán hàng , giáo dục , kinh
+          doanh , du lịch ... Sử dụng các công nghệ hàng đầu trong lĩnh vực
+          thiết kế website như : HTML-5 , Bootstrap CSS, Tailwind CSS,
+          Javascript
+        </p>
+
+        <!-- contact me -->
+        <div class="flex mt-10 gap-5 md:px-0 px-5 justify-center flex-wrap">
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a
+            href=""
+            class="px-3 py-2 text-gray-500 dark:hover:text-white hover:text-black hover:-translate-y-1 transition-all duration-300 ease-in-out dark:border shadow-primary rounded"
+          >
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Giới thiệu công nghệ -->
+    <section class="mt-10">
+      <div class="grid md:grid-cols-2 gap-5 px-10">
+        <div
+          class="group dark:hover:border-red hover:border-red-500 hover:-translate-y-1 p-4 shadow-primary rounded dark:border-gray-500 dark:border md:mb-0 mb-3 transition-all duration-300 ease-in-out relative"
+        >
+          <h3
+            class="text-xl pb-1 italic inline border-b dark:text-moi1 text-[#2c2c2c]"
+          >
+            HTML-5
+          </h3>
+          <p class="text-gray-500 mt-2">
+            Là ngôn ngữ đánh dấu tiêu chuẩn được sử dụng để tạo và cấu trúc
+            thành các thành phần trên website.Nó định nghĩa cấu trúc của tài
+            liệu web, kết hợp với CSS để tạo giao diện và JavaScript để thêm
+            tương tác.
+          </p>
+          <button
+            type="button"
+            class="btn-add-love mt-2 dark:border cursor-pointer shadow-primary rounded-full p-2 block ms-auto hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 group-hover:text-red-500 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <span
+            class="show-love-number text-white font-bold absolute -top-3 px-3 opacity-0 rounded-full bg-red-500 -right-2 transition-all duration-200"
+            >0</span
+          >
+          <span class="hidden-love-number hidden">0</span>
+        </div>
+        <div
+          class="group dark:hover:border-red-500 hover:-translate-y-1 p-4 shadow-primary rounded dark:border-gray-500 dark:border md:mb-0 mb-3 transition-all duration-300 ease-in-out relative"
+        >
+          <h3
+            class="text-xl pb-1 italic inline border-b dark:text-moi1 text-[#2c2c2c]"
+          >
+            CSS
+          </h3>
+          <p class="text-gray-500 mt-2">
+            là ngôn ngữ dùng để mô tả và định dạng giao diện của các phần tử
+            HTML trên trang web. Nó giúp tách phần nội dung (HTML) và trình bày
+            (CSS), giúp việc thiết kế web trở nên dễ quản lý, linh hoạt và đẹp
+            mắt hơn.
+          </p>
+          <button
+            type="button"
+            class="btn-add-love mt-2 dark:border cursor-pointer shadow-primary rounded-full p-2 block ms-auto hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 group-hover:text-red-500 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <span
+            class="show-love-number text-white font-bold absolute -top-3 px-3 opacity-0 rounded-full bg-red-500 -right-2 transition-all duration-200"
+            >0</span
+          >
+          <span class="hidden-love-number hidden">0</span>
+        </div>
+        <div
+          class="group dark:hover:border-red-500 hover:-translate-y-1 p-4 shadow-primary rounded dark:border-gray-500 dark:border md:mb-0 mb-3 transition-all duration-300 ease-in-out relative"
+        >
+          <h3
+            class="text-xl pb-1 italic inline border-b dark:text-moi1 text-[#2c2c2c]"
+          >
+            Bootstrap
+          </h3>
+          <p class="text-gray-500 mt-2">
+            là một framework front-end mã nguồn mở giúp xây dựng website nhanh
+            chóng , đẹp mắt và tương thích với nhiều thiết bị .Nó cung cấp sẵn
+            hệ thống lưới grid system dễ dàng kiểm soát các phần tử , cung cấp
+            nhiều các component đa dạng sử dụng bằng cách thêm các class phù
+            hợp.
+          </p>
+          <button
+            type="button"
+            class="btn-add-love mt-2 dark:border cursor-pointer shadow-primary rounded-full p-2 block ms-auto hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 group-hover:text-red-500 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <span
+            class="show-love-number text-white font-bold absolute -top-3 px-3 opacity-0 rounded-full bg-red-500 -right-2 transition-all duration-200"
+            >0</span
+          >
+          <span class="hidden-love-number hidden">0</span>
+        </div>
+        <div
+          class="group dark:hover:border-red-500 hover:-translate-y-1 p-4 shadow-primary rounded dark:border-gray-500 dark:border md:mb-0 mb-3 transition-all duration-300 ease-in-out relative"
+        >
+          <h3
+            class="text-xl pb-1 italic inline border-b dark:text-moi1 text-[#2c2c2c]"
+          >
+            Tailwind
+          </h3>
+          <p class="text-gray-500 mt-2">
+            là một framework của css theo phong cách hiện đại theo triết lí
+            utility-first , cung cấp hàng trăm các tiện ích nhỏ khác với
+            bootstrap cung cấp sẵn các component thì tailwind chỉ cung cấp các
+            lớp nhỏ -> bootstrap cho bạn món ăn còn tailwind cho bạn nguyên liệu
+            cho bạn nhào nấu ra món ăn đó.
+          </p>
+          <button
+            type="button"
+            class="btn-add-love mt-2 dark:border cursor-pointer shadow-primary rounded-full p-2 block ms-auto hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 group-hover:text-red-500 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <span
+            class="show-love-number text-white font-bold absolute -top-3 px-3 opacity-0 rounded-full bg-red-500 -right-2 transition-all duration-200"
+            >0</span
+          >
+          <span class="hidden-love-number hidden">0</span>
+        </div>
+        <div
+          class="group md:col-span-2 dark:hover:border-red-500 hover:-translate-y-1 p-4 shadow-primary rounded dark:border-gray-500 dark:border md:mb-0 mb-3 transition-all duration-300 ease-in-out relative"
+        >
+          <h3
+            class="text-xl pb-1 italic inline border-b dark:text-moi1 text-[#2c2c2c]"
+          >
+            JavaScript
+          </h3>
+          <p class="text-gray-500 mt-2">
+            là ngôn ngữ lập trình bậc cao phổ biến nhất trên web , giúp tạo ra
+            các tương tác trên web -> nếu html là khung xe máy , css là vỏ xe
+            vậy js chính là động cơ để có thể vận hành chiếc xe máy đó . Ngoài
+            ra js cũng là ngôn ngữ nền để chúng ta có thể phát triển lên các
+            framework mạnh mẽ khác như : React , Node.js , Vue...
+          </p>
+          <button
+            type="button"
+            class="btn-add-love mt-2 dark:border cursor-pointer shadow-primary rounded-full p-2 block ms-auto hover:scale-95 transition-all duration-300 ease-in-out"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="size-6 group-hover:text-red-500 transition-all duration-300 ease-in-out"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"
+              />
+            </svg>
+          </button>
+          <span
+            class="show-love-number text-white font-bold absolute -top-3 px-3 opacity-0 rounded-full bg-red-500 -right-2 transition-all duration-200"
+            >0</span
+          >
+          <span class="hidden-love-number hidden">0</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Đặt câu hỏi cho tôi -->
+    <section class="mt-10 px-10">
+      <div class="">
+        <div
+          class=" shadow-primary hover:border-green-500 hover:-translate-y-1 dark:border border-gray-500 rounded py-3 px-4 transition duration-300 ease-in-out"
+        >
+          <h3
+            class="text-xl dark:group-hover:text-white font-normal tracking-wide"
+          >
+            Personal Information
+          </h3>
+          <small class="text-gray-500"
+            >Use a permanent address where you can receive mail.</small
+          >
+          <form action="" class="mt-5">
+            <div class="flex gap-x-2 mb-2 flex-wrap">
+              <div class="flex flex-col grow">
+                <label class="mb-2" for="name">Tên của bạn</label>
+                <input
+                  class="border border-gray-500 rounded py-2 px-1 outline-none dark:bg-black focus:border-green-500 transition-all duration-300 ease-in-out"
+                  type="text"
+                  name="name"
+                  id="name"
+                  placeholder="nhập tên"
+                />
+              </div>
+              <div class="flex flex-col grow">
+                <label class="mb-2" for="name2">Họ của bạn</label>
+                <input
+                  class="border border-gray-500 rounded py-2 px-1 outline-none focus:border-green-500 transition-all duration-300 ease-in-out"
+                  type="text"
+                  name="name2"
+                  id="name2"
+                  placeholder="nhập họ"
+                />
+              </div>
+            </div>
+            <div class="flex flex-col w-2/3 mb-2">
+              <label class="mb-2" for="email">Địa chỉ email</label>
+              <input
+                class="border border-gray-500 rounded py-2 px-1 outline-none focus:border-green-500 transition-all duration-300 ease-in-out"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="nhập email"
+              />
+            </div>
+            <div class="flex flex-col min-w-22 max-w-1/3 mb-2">
+              <label class="mb-2" for="country">Quốc gia</label>
+              <select
+                class="border border-gray-500 rounded py-2 px-1 outline-none dark:bg-black focus:border-green-500 transition-all duration-300 ease-in-out"
+                name="country"
+                id="country"
+              >
+                <option value="Viet Nam">Việt Nam</option>
+                <option value="Chia">Trung Quốc</option>
+                <option value="America">Mỹ</option>
+              </select>
+            </div>
+            <div class="flex flex-col mb-2">
+              <label class="mb-2" for="address">Địa chỉ cụ thể</label>
+              <input
+                class="border border-gray-500 rounded py-2 px-1 outline-none focus:border-green-500 transition-all duration-300 ease-in-out"
+                type="text"
+                name="address"
+                id="address"
+                placeholder="nhập địa chỉ cụ thể"
+              />
+            </div>
+            <button class="flex group overflow-hidden mt-3 ms-auto gap-x-2 bg-green-500 px-3 py-2 rounded text-moi1 cursor-pointer">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-6 group-hover:translate-x-20  transition-all duration-1000 ease-in-out"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
+                />
+              </svg>
+
+              <span class="group-hover:opacity-0 transition-all duration-1000 ease-in-out ">Send me</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- chân trang -->
+    <footer class="mt-10 px-10 py-10">
+      <div class="md:w-1/3 w-1/2 mx-auto border-gray-500/50 border mb-10"></div>
+      <ul class="flex justify-center items-center gap-x-10 gap-y-5 flex-wrap list-disc ">
+        <li class="text-gray-500 ">Built with <span class="italic">moiCode</span></li>
+        <li class="text-gray-500">No copy right</li>
+        <li class="text-gray-500">© 2026 </li>
+      </ul>
+    </footer>
+
+    <script>
+      // xử lí sự kiện chế độ tối sáng
+      const btnDarkMode = document.querySelector(".btn-dark-mode");
+      btnDarkMode.addEventListener("click", function () {
+        document.documentElement.classList.toggle("dark");
+      });
+
+      // xử lí sự kiện click hiện thị số lần click theo từng khối
+      const btnListLove = document.querySelectorAll(".btn-add-love");
+      const loveShowNumber = document.querySelectorAll(".show-love-number");
+      const hiddenLoveNumber = document.querySelectorAll(".hidden-love-number");
+      let currentIndex = 0;
+      for (let index = 0; index < btnListLove.length; index++) {
+        btnListLove[index].addEventListener("click", function () {
+          currentIndex = hiddenLoveNumber[index].innerHTML;
+          currentIndex++;
+          hiddenLoveNumber[index].innerHTML = currentIndex;
+          loveShowNumber[index].innerHTML = currentIndex;
+          loveShowNumber[index].style.opacity = "1";
+          all();
+        });
+      }
+
+      // tổng số lần click tất cả các khối
+      const allOfLove = document.querySelector(".all-of-love");
+      let a = 0;
+      function all() {
+        for (let index = 0; index < hiddenLoveNumber.length; index++) {
+          a += Number(hiddenLoveNumber[index].innerHTML);
+        }
+        console.log(a);
+        allOfLove.innerHTML = a;
+        a = 0;
+      }
+
+      // xử lí bar
+      const barButton = document.querySelector(".bar-btn");
+      const barCancel = document.querySelector(".cancel-btn");
+      const barContent = document.querySelector(".bar-content");
+      barButton.addEventListener("click", function () {
+        barContent.style.width = "40%";
+      });
+      barCancel.addEventListener("click", function () {
+        barContent.style.width = "0";
+      });
+    </script>
+  </body>
+</html>
